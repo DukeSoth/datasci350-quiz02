@@ -1,0 +1,12 @@
+{
+  "hash": "0989987c2b30273681a3cc32c888df3f",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"The Bond Films\"\n---\n\nThis page looks at how James Bond movies performed at the box office over time.\n\n::: {#2d5145d6 .cell execution_count=1}\n``` {.python .cell-code}\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\nfilms = pd.read_csv(\"films.csv\")\nbond = films[films[\"franchise\"] == \"James Bond\"]\n```\n:::\n\n\nThe Bond movies in this dataset were released between 1995 and 2021.\n\n::: {#7a0c4072 .cell execution_count=2}\n``` {.python .cell-code}\nplt.plot(bond[\"year\"], bond[\"revenue_musd\"])\nplt.xlabel(\"Year\")\nplt.ylabel(\"Worldwide Revenue (Million USD)\")\nplt.show()\n```\n\n::: {.cell-output .cell-output-display}\n![](bond_files/figure-html/cell-3-output-1.png){width=602 height=429}\n:::\n:::\n\n\n",
+    "supporting": [
+      "bond_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

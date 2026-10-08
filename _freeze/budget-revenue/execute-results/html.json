@@ -1,0 +1,12 @@
+{
+  "hash": "ea3867f3a0fc2deabacb38f2562e8e75",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Budget and Revenue\"\n---\n\nThis page looks at how movie budgets relate to box office revenue. @fig-budget-revenue shows that movies with bigger budgets tend to make more money.\n\n::: {#cell-fig-budget-revenue .cell execution_count=1}\n``` {.python .cell-code}\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\nfilms = pd.read_csv(\"films.csv\")\n\nplt.scatter(films[\"budget_musd\"], films[\"revenue_musd\"])\nplt.xlabel(\"Budget (Million USD)\")\nplt.ylabel(\"Worldwide Revenue (Million USD)\")\nplt.show()\n```\n\n::: {.cell-output .cell-output-display}\n![Film Budget vs. Worldwide Revenue](budget-revenue_files/figure-html/fig-budget-revenue-output-1.png){#fig-budget-revenue width=602 height=429}\n:::\n:::\n\n\n",
+    "supporting": [
+      "budget-revenue_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

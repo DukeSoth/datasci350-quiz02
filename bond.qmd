@@ -1,0 +1,22 @@
+---
+title: "The Bond Films"
+---
+
+This page looks at how James Bond movies performed at the box office over time.
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+films = pd.read_csv("films.csv")
+bond = films[films["franchise"] == "James Bond"]
+```
+
+The Bond movies in this dataset were released between `{python} int(bond["year"].min())` and `{python} int(bond["year"].max())`.
+
+```{python}
+plt.plot(bond["year"], bond["revenue_musd"])
+plt.xlabel("Year")
+plt.ylabel("Worldwide Revenue (Million USD)")
+plt.show()
+```
